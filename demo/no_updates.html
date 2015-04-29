@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Demo: CSUN Session Viewer Without Live Region Updates</title>
+    <link rel="stylesheet" href="css/pc_results_table.css" />
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/liveregionnotifier.js"></script>
+    <script type="text/javascript" src="js/CSUN_sessions_table.js"></script>
+    <script>
+        var noLRUpdates = true;
+    </script>
+</head>
+
+<body>
+    <a href="../../index.html">Back to Session Page</a>
+    <h1>Demo: CSUN Session Viewer Without Live Region Updates</h1>
+    <div class="parentDiv">
+        <form id="filterForm" action="#">
+            <label for="filterBy">Filter Sessions By:</label>
+            <input type="text" id="filterBy">
+            <label for="groupBy">Group Rows By:</label>
+            <select name="groupBy" id="groupBy">
+                <option value="day">Time slot</option>
+                <option value="presenters">Presenter</option>
+                <option value="location">Location</option>
+                <option value="trackTopic">track / Topic</option>
+                <option value="sessionType">Session Type</option>
+                <option value="keywords">Keywords</option>
+            </select>
+            <button type="submit" id="updateTable">Update Table</button>
+            <button type="reset">Reset Table</button>
+            <button id="collapseAll">Collapse All</button>
+            <button id="expandAll">Expand All</button>
+        </form>
+        <div class="cgi-PCButtonArea">
+
+        </div>
+        <div class="cgi-PCOuterContainer">
+            <div class="cgi-PCTableWrapper cgi-PCHeaderWrapper">
+                <div class="cgi-PCScrollContainer cgi-PCHeaderContainer">
+                    <table class="cgi-PCTable cgi-PCHeaderTable">
+
+                    </table>
+                </div>
+            </div>
+            <div class="cgi-PCTableWrapper cgi-PCBodyWrapper">
+                <div class="cgi-PCScrollContainer cgi-PCBodyContainer">
+                    <table id="PCSampleTable" class="cgi-PCTable cgi-PCBodyTable">
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
