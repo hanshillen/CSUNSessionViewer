@@ -1,0 +1,3 @@
+[submodule "LRNotifer"]
+	path = LRNotifer
+	url = https://github.com/hanshillen/LRNotifer.git
