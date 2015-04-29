@@ -411,7 +411,6 @@ $(document).ready(
         }
 
         function applyFilter(filterString) {
-
             var chunks,
                 filterRules = [];
             // get filters
@@ -447,16 +446,16 @@ $(document).ready(
                 }
                 filterRules.push(filterRule);
             });
-
             $("#PCSampleTable tbody").show();
             $("#PCSampleTable tr:not(.sizerRow,.groupHeader)").show().filter(function (i) {
                 var hide = false,
                     colIndex,
                     $row = $(this);
 
-                $.each(filterRules, function (i, rule) {
+                $.each(filterRules, function (j, rule) {
 
                     colIndex = columnHeaderIds.indexOf(rule.name);
+                    
                     if (colIndex === -1) {
                         return;
                     }
